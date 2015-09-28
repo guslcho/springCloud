@@ -1,6 +1,6 @@
 info:
-  component: Config Samples
-  description: Spring Cloud Samples
+  component: Config Samples 
+  description: Spring Cloud Samples 
   url: https://github.com/guslcho/springCloud
 endpoints:
   restart:
