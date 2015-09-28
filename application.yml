@@ -1,11 +1,14 @@
 info:
-  component: Config Samples 
-  description: Spring Cloud Samples 
+  component: Config Samples add test component
+  description: Spring Cloud Samples x
   url: https://github.com/guslcho/springCloud
 endpoints:
   restart:
     enabled: true
-logging:
+eeee
+
+eeee
+eeelogging:
   levels:
     org.springframework.boot.env.PropertySourcesLoader: TRACE
     org.springframework.web: DEBUG
