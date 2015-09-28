@@ -5,7 +5,7 @@ info:
 endpoints:
   restart:
     enabled: true
-logging:
+logging:                        aaaaaa
   levels:
     org.springframework.boot.env.PropertySourcesLoader: TRACE
     org.springframework.web: DEBUG
