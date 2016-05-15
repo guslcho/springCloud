@@ -60,6 +60,8 @@ public class Main {
 
 			return;
 
+		}else{
+			//System.out.println("maxSum: " + maxSum);
 		}
 
 		for (int row = 0; row < mapSize; row++) {
