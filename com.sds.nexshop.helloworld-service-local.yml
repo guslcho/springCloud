@@ -1,0 +1,36 @@
+spring: 
+  #Database
+  datasource.driver-class-name: org.hsqldb.jdbcDriver
+  datasouce.url: jdbc:hsqldb:hsql://localhost/sampledb
+  datasouce.username: SA
+  datasouce.password: 
+  #mvc
+  mvc.locale: en_US
+
+#server
+server:
+  port: ${PORT:2222}
+
+logging: 
+  level.org.anyframe.plugin: DEBUG
+  level.org.springframework: INFO
+  level.org.springframework.transaction: DEBUG
+  level.org.springframework.jdbc.datasource.DataSourceTransactionManager: DEBUG
+  level.org.anyframe.jdbc.support.CompleteQueryPostProcessor: INFO
+  level.org.anyframe.jdbc.support.InjectionPatternPostProcessor: WARN
+  level.root: ERROR
+
+
+eureka:
+  instance.metadataMap.instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+  client.serviceUrl.defaultZone: http://localhost:8761/eureka/
+
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+  
+message: Hello World!
+#message: Hello!
+
+
+test: test
