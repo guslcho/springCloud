@@ -1,0 +1,37 @@
+server:
+  port: ${PORT:9999}
+management:
+  security: 
+    enabled : false
+
+endpoints: 
+  restart.enabled: true
+  shutdown.enabled: true
+  health.sensitive: false
+
+zuul: 
+  ignored-services: '*'
+  ignoredPatterns: /**/api/**
+  routes:
+    discovery-server: /eureka/**
+    helloworld-service: /hello/**
+    customer-service: /customer/**
+  
+
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+  
+hystirx:
+  command:
+    default: 
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
+      metrics:
+        healthSnapshot:
+          intervalInMilliseconds: 500
+    #HystrixCommandKey:
+      #circuitBreaker:
+        #requestVolumeThreshold: 5
