@@ -6,3 +6,6 @@ management:
 eureka: 
   instance.metadataMap.instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
   client.serviceUrl.defaultZone: http://localhost:8761/eureka/
+
+  #message: Hello World!
+message: Hello!
