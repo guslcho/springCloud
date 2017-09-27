@@ -22,16 +22,12 @@ ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
   
-hystirx:
+hystrix:
   command:
-    default: 
+    default:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 2000
-      metrics:
-        healthSnapshot:
-          intervalInMilliseconds: 500
-    #HystrixCommandKey:
-      #circuitBreaker:
-        #requestVolumeThreshold: 5
+            timeoutInMilliseconds: 2000 #설정 시간동안 처리 지연발생시 timeout and 설정한 fallback 로직 수행 (HystrixFallbackConfiguration.class)
+      circuitBreaker:
+        requestVolumeThreshold: 3 #설정수 만큼 처리가 지연될시 circuit open
