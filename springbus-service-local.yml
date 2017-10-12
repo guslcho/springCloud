@@ -1,0 +1,19 @@
+---
+server:
+  port: 3333
+
+another:
+  key: anotherkeyvalue
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: ENC(urtpzW3QlqYwqRFYBAhsxQ==)
+    password: ENC(urtpzW3QlqYwqRFYBAhsxQ==)
+    
+jasypt:
+  encryptor:
+    password: password
+    
+service.prop: test
